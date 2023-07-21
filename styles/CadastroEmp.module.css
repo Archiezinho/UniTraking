@@ -1,0 +1,132 @@
+.CadastroEmp {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: radial-gradient(#3e46d2 1.7000000000000002px, transparent 1.7000000000000002px), radial-gradient(#3e46d2 1.7000000000000002px, #e5e5f7 1.7000000000000002px);
+    background-size: 68px 68px;
+    background-position: 0 0, 34px 34px;
+}
+
+.containerCadastroEmp {
+    background-color: white;
+    width: 80%;
+    max-width: 1100px;
+    height: 650px;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    align-items: center;
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.cadLeftside h2 {
+    color: var(--bg-orange2-color);
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    margin: 30px 0 30px 0;
+    text-align: center;
+}
+
+.cadRightSide {
+    width: 80%;
+}
+
+.containerCad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerCad input {
+    font-weight: 300;
+    font-size: 1.1em;
+    position: relative;
+    padding: 5px 4px 5px 10px;
+    background-color: #dfe5ea;
+    border-radius: 2px;
+    width: 100%;
+    color: #85888d;
+    border: #3e45d200 solid 1px;
+    margin-bottom: 10px;
+}
+
+.containerCad label {
+    color: #72767d;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 4px;
+}
+
+.containerCad input:is(:focus) {
+    border: #3e46d2 solid 1px;
+}
+
+.btnCad {
+    margin-top: 20px;
+    padding: 9px;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 450px;
+    background-color: #4c53db;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btnBackPage {
+    font-size: 2.5em;
+    color: #3e46d2;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.btnbackPage a,
+.bi-arrow-left-square-fill {
+    color: #3e46d2;
+    background-color: white;
+    display: flex;
+}
+
+
+@media screen and (min-width: 1100px) {
+    .containerCadastroEmp{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cadLeftside, .cadRightSide{
+        width: 50%;
+        height: 100%;
+    }
+
+    .cadLeftside{
+        background-color: #4c53db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cadRightSide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .containerCad{
+        width: 80%;
+        height: 100%;
+    }
+
+}

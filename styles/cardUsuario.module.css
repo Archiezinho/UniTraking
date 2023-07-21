@@ -1,0 +1,71 @@
+.CardUsuario {
+    width: 100%;
+    max-width: 850px;
+    height: 200px;
+    background-color: #1f90ed;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+        gap: 10px;
+}
+
+.CardUsuario input, .modalAddInput{
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+.btnDeleteUsuario {
+    width: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e34f19;
+    color: white;
+    font-weight: 600;
+    justify-self: center;
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+.btnUpdateUsuario {
+    width: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #3e6ed5;
+    color: white;
+    font-weight: 600;
+    justify-self: center;
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 650px) {
+    .CardUsuario {
+        flex-direction: row;
+        height: auto;
+    }
+}

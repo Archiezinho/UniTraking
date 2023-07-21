@@ -1,0 +1,225 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Booking{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  armador String
+  numeroBooking String
+  quantidadeContainer Int
+  destino String
+  status String @default("Pendente")
+
+  logs Log[]
+
+  containerExtras ContainerExtra[]
+
+  containers Container[]
+  
+  estufas Estufa[]
+
+  exportadorId Int
+  exportador Exportador @relation(fields: [exportadorId], references: [id])
+
+  clienteId Int
+  cliente Cliente @relation(fields: [clienteId], references: [id])
+
+  @@map("bookings")
+}
+
+model Container{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  identificacao String @unique
+  tara String
+  maxgross String
+  net String
+  cuCap String
+  imageContainer String
+  status String @default("Cadastro do Depot Necessário")
+
+  bookingId Int
+  booking Booking @relation(fields: [bookingId], references: [id])
+
+  containersArmazem ContainerArmazem[]
+
+  containerExtras ContainerExtra[]
+
+  logs Log[]
+
+  estufas Estufa[]
+
+  @@map("containers")
+}
+
+model ContainerExtra{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  imageLacre String
+  placaCaminhao String
+
+  motoristaId Int
+  motorista Motorista @relation(fields: [motoristaId], references: [id])
+
+  containerId Int
+  container Container @relation(fields: [containerId], references: [id])
+
+  bookingId Int
+  booking Booking @relation(fields: [bookingId], references: [id])
+
+  @@map("containerExtras")
+}
+
+model ContainerArmazem{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  destino String
+
+  containerId Int
+  container Container @relation(fields: [containerId], references: [id])
+
+  transportadoraId Int
+  transportadora User @relation(fields: [transportadoraId], references: [id], name:"transportadora")
+
+  armazemId Int
+  armazem User @relation(fields: [armazemId], references: [id], name:"armazem")
+
+  @@map("containersArmazem")
+}
+
+model Estufa{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  peso Decimal
+  volume Decimal
+  embalagem String
+  tipoCarga String
+  imageLacreArmador String?
+  imageLacreSif String?
+  documentoCarga String?
+  documentoCargaPerigosa String?
+  legenda String?
+
+  logs Log[]
+
+  bookingId Int
+  booking Booking @relation(fields: [bookingId], references: [id])
+
+  containerId Int
+  container Container @relation(fields: [containerId], references: [id])
+
+  motoristaId Int
+  motorista Motorista @relation(fields: [motoristaId], references: [id])
+
+  @@map("estufas")
+}
+
+model Cliente{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  cnpj String
+  nome String
+  endereco String
+  email String
+  telefone String
+  razaoSocial String
+
+  exportadores Exportador[]
+
+  logs Log[]
+
+  bookings Booking[]
+
+  users User[]
+
+  @@map("clientes")
+}
+
+model Motorista{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  nome String
+  cpf String @unique
+  documento String?
+
+  estufas Estufa[]
+
+  containerExtras ContainerExtra[]
+
+  @@map("motoristas")
+}
+
+model User{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  nome String
+  user String @unique
+  senha String
+  cargo String
+
+  logs Log[]
+
+  transportadora ContainerArmazem[] @relation("transportadora")
+
+  armazem ContainerArmazem[] @relation("armazem")
+
+  clienteId Int
+  cliente Cliente @relation(fields: [clienteId], references: [id])
+
+  @@map("users")
+}
+
+model Exportador{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  nome String
+
+  bookings Booking[]
+
+  clienteId Int
+  cliente Cliente @relation(fields: [clienteId], references: [id])
+
+  @@map("exportadores")
+}
+
+model Log{
+  id Int @id @default(autoincrement())
+  created_at DateTime @default(now())
+  active Boolean @default(true)
+  tipo String?
+
+  clienteId Int
+  cliente Cliente @relation(fields: [clienteId], references: [id])
+
+  userId Int
+  user User @relation(fields: [userId], references: [id])
+
+  containerId Int?
+  container Container? @relation(fields: [containerId], references: [id])
+
+  estufaId Int?
+  estufa Estufa? @relation(fields: [estufaId], references: [id])
+
+  bookingId Int?
+  booking Booking? @relation(fields: [bookingId], references: [id])
+
+  @@map("logs")
+}

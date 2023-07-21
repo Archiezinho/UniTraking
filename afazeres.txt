@@ -1,0 +1,21 @@
+1-
+-cucap e net vão para container extra
+-adicionar tamanho no container
+-adicionar transportadoraId no container (opcional no cadastro)
+
+2-
+-arrumar a tela armazem pra aparecer os containers q o exportador 
+mandou pro armazem
+-segurança api
+
+3-
+-segurança das telas, para q só os cargos respectivos façam suas ações
+-tela de exportadores levar para a bookings do exportador especifico
+
+4- depende do ytz
+-botão logout
+-array exportadores tela bookings
+-array armazens tela bookings
+
+5-
+-logs

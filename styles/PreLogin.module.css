@@ -1,0 +1,201 @@
+.PreLogin {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image: radial-gradient(#3e46d2 1.7000000000000002px, transparent 1.7000000000000002px), radial-gradient(#3e46d2 1.7000000000000002px, #e5e5f7 1.7000000000000002px);
+    background-size: 68px 68px;
+    background-position: 0 0, 34px 34px;
+    text-align: center;
+}
+
+/**** CARD ESQUERDA ****/
+.PreLoginLog {
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(177deg, rgba(0, 81, 140, 1) 0%, rgba(47, 145, 217, 1) 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--white-font);
+    font-size: 1.2em;
+    padding: 20px;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+/**** CARD DIREITA ****/
+.PreLoginCad {
+    width: 80%;
+    height: 300px;
+    background: linear-gradient(177deg, rgb(33, 32, 88) 0%, rgb(85, 145, 201) 100%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--white-font);
+    font-size: 1.2em;
+    padding: 20px;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+.PreLoginLog,
+.PreLoginCad {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+/**** BOTOES DOS CARDS DIRETA/ESQUERDA ****/
+.btnCad,
+.btnLog {
+    width: 70%;
+    height: 70px;
+    max-width: 200px;
+    padding: 5px 30px 5px 30px;
+    color: #e5e5f7;
+    background-color: var(--bg-orange1-color);
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+/**** SOL IMG ****/
+.sun {
+
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: rgba(235, 204, 81, 0.875);
+    z-index: 2;
+}
+
+.sun::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(235, 204, 81, 0.298);
+    border-radius: 100px;
+}
+
+.sun::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(235, 204, 81, 0.437);
+    border-radius: 100px;
+}
+
+/**** IMG DO BARCO COM CONTAINER E ANIMAÇAO ****/
+.boatImg {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    bottom: -47px;
+    transform: translateX(145%);
+}
+
+.truckImg {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: -47px;
+    transform: translateX(-210%);
+}
+
+.PreLoginLog:hover,
+.PreLoginCad:hover {
+    transform: scale(1.1);
+}
+
+.PreLoginLog:hover .boatImg {
+    animation: boat 14s infinite ease-out;
+}
+
+.PreLoginCad:hover .truckImg {
+    animation: truck 5s infinite ease-in-out;
+}
+
+
+/***** ANIMATIONS - #PRELOGIN_BOAT01, #PRELOGIN_CONTAINER02 *****/
+@keyframes boat {
+    0% {
+        transform: translateX(120%);
+    }
+
+    100% {
+        transform: translateX(-145%);
+    }
+}
+
+@keyframes truck {
+    0% {
+        transform: translateX(-210%);
+    }
+
+    100% {
+        transform: translateX(250%);
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .btnCad,
+    .btnLog {
+        width: 70%;
+        height: 120px;
+    }
+
+    .PreLogin {
+        width: 100vw;
+        height: 99vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #e5e5f7;
+        opacity: 1;
+        background-image: radial-gradient(#3e46d2 1.7000000000000002px, transparent 1.7000000000000002px), radial-gradient(#3e46d2 1.7000000000000002px, #e5e5f7 1.7000000000000002px);
+        background-size: 68px 68px;
+        background-position: 0 0, 34px 34px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .PreLoginLog {
+        margin: 0 20px 0 0;
+    }
+
+    .boatImg {
+        width: 400px;
+        bottom: -62px;
+    }
+
+    .PreLoginLog,
+    .PreLoginCad {
+        font-size: 2em;
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+    }
+}

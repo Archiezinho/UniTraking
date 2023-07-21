@@ -1,0 +1,139 @@
+.Bookings, .Containers{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchArea {
+    margin-top: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px 5px 30px;
+}
+.searchArea2 {
+    margin-top: 105px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 30px 5px 30px;
+}
+
+.Bookings span[data-addb], .Containers span[data-addc]{
+    padding: 8px;
+    border: dashed 1px #ea8b1f;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    color: #ea8b1f;
+    background-color: rgba(255, 255, 255, 0.649);
+    user-select: none;
+}
+
+.Bookings input[type="search"], .Containers input[type="search"]{
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+    border-bottom: solid 1px #ea8b1f;
+    border-radius: 2px;
+    background-color: rgb(245, 240, 238);
+    padding: 2px 40px 2px 10px;
+    margin-left: 20px;
+    font-weight: 400;
+
+}
+
+.searchBtn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 40px;
+    top: 105px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 1.1em;
+    color: #ea8b1f;
+}
+
+.bookingsContainer, .ContainersCards {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.CreateBookingArea, .CreateContainerArea {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    z-index: 3;
+    overflow: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(150deg, rgb(43, 126, 220), #2d35ce, #171fbe);
+    transition: all 0.4s ease-in-out;
+}
+
+.CreateBookingArea h2, .CreateContainerArea h2 {
+    width: 50%;
+    padding: 10px;
+    margin: 20px 0 0 10px;
+    font-size: 2em;
+    color: white;
+}
+
+.campoCadastro{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campoCadastro input {
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.imgCont{
+    border: dashed 1px white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.104);
+    color: white;
+}
+
+.formCBooking, .formCContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.btnArea {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.btnArea button {
+    width: 40%;
+}
+
+.Bookings .activeModal {
+    height: 70%;
+}
+
+.Containers .activeModal {
+    height: 80%;
+}
+
+.null{
+    display: none;
+}

@@ -1,0 +1,238 @@
+.Home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.cardsHome {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Home img {
+    height: 150px;
+    width: 100%;
+}
+
+.Home .titleSubTitle {
+    color: var(--bg-blue1-color);
+    font-weight: var(--fw-2);
+    font-size: 1.1em;
+}
+
+.Home .rastreabilidadeCard,
+.cadBookingsHome {
+    position: relative;
+    border-radius: 15px;
+    background-color: var(--bg-blue2-color);
+    padding: 20px;
+    height: 150px;
+    width: 90%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--white-font);
+}
+
+.Home .rastreabilidadeCard h2,
+.cadBookingsHome h2 {
+    color: var(--white-font);
+    margin-bottom: 10px;
+}
+
+.bi-shield-fill-check {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(84, 173, 84);
+    filter: drop-shadow(0 0mm 4mm rgba(0, 0, 0, 0.499));
+}
+
+.bi-geo-alt-fill {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(200, 94, 70);
+    filter: drop-shadow(0 0mm 4mm rgba(0, 0, 0, 0.499));
+}
+
+.btnAcesso {
+    background-color: var(--bg-orange2-color);
+    padding: 5px 25px 5px 25px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 1.1em;
+    color: var(--white-font);
+    box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+}
+
+.rightSideSec,
+.leftRightRas {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .Home {
+        height: 100vh;
+    }
+
+    .Home img {
+        height: 200px;
+        width: 100%;
+    }
+
+    .cardsHome {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 30px 0 30px;
+    }
+
+    .Home .rastreabilidadeCard,
+    .cadBookingsHome {
+        border-radius: 15px;
+        background-color: var(--bg-blue2-color);
+        padding: 20px;
+        height: 250px;
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--white-font);
+        margin: 0 0 0 20px;
+        position: relative;
+    }
+
+    .rightSideSec,
+    .leftRightRas {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        border-radius: 20px;
+        margin-left: 15px;
+        overflow: hidden;
+    }
+
+    .leftRightRas img {
+        width: 110%;
+        height: 110%;
+        border-radius: 20px;
+    }
+
+
+    .bi-shield-fill-check {
+        position: absolute;
+        top: 75px;
+        right: 55px;
+        font-size: 6rem;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(84, 173, 84);
+        filter: drop-shadow(0 0mm 4mm rgba(0, 0, 0, 0.499));
+    }
+
+    .bi-geo-alt-fill {
+        position: absolute;
+        top: 70px;
+        right: 55px;
+        font-size: 6rem;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(195, 74, 74);
+        filter: drop-shadow(0 0mm 4mm rgba(0, 0, 0, 0.499));
+    }
+
+    .btnAcesso {
+        padding: 10px 35px 10px 35px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+
+    .cardsHome {
+       margin-bottom: 10px;
+    }
+
+    .Home .rastreabilidadeCard,
+    .cadBookingsHome {
+        border-radius: 15px;
+        background-color: var(--bg-blue2-color);
+        padding: 20px;
+        height: 300px;
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--white-font);
+        margin: 0 0 0 20px;
+        position: relative;
+    }
+
+    .bi-shield-fill-check {
+        position: absolute;
+        top: 90px;
+        right: 140px;
+        font-size: 7rem;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(84, 173, 84);
+        filter: drop-shadow(0 0mm 4mm rgba(0, 0, 0, 0.499));
+    }
+
+    .bi-geo-alt-fill {
+        position: absolute;
+        top: 90px;
+        right: 140px;
+        font-size: 7rem;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(195, 74, 74);
+        filter: drop-shadow(0 0mm 4mm rgba(0, 0, 0, 0.499));
+    }
+}

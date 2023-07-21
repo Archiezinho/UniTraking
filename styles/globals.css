@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&family=Poppins:wght@100;200;300;600;&display=swap');
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  font-weight: 100;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /**** FONT WEIGHT ****/
+  --fw-2: 200;
+  --fw-3: 300;
+  --fw-6: 600;
+
+  /**** BACKGROUND COLORS ****/
+  --bg-orange1-color: #ea841d;
+  --bg-orange2-color: #e39c54;
+  --bg-blue1-color: #00518c;
+  --bg-blue2-color: #3679a9;
+
+  /**** FONT COLOR ****/
+  --white-font: #f2f2f2;
+  --black-font: #222222;
+}
+
+*,
+*::before,
+*::after {
+  /**** RESET PADRAO ****/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /**** RESET DE TEXTO E LINKS ****/
+  list-style: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,290 @@
+.Container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contProgress {
+    position: relative;
+    margin: 90px 0 40px 0;
+    padding: 10px 10px;
+    width: 100%;
+    min-height: 300px;
+    display: flex
+}
+
+.progressIcon {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+.Container span[data-container-recebido],
+.Container span[data-container-transito],
+.Container span[data-container-finalizado] {
+    color: #a9a9a9;
+}
+
+.progressText {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.15em;
+    color: #a9a9a9;
+}
+
+/******************************************************* IMPORTANTE ******************************************/
+
+/** ATIVAR A COR VERDE NA BARRA DE PROGRESSO*/
+.activePro {
+    background-color: #85c744 !important;
+}
+
+/** ATIVAR A COR VERDE NO TEXTO E ICONES*/
+.activeProIcon {
+    color: #85c744 !important;
+}
+
+
+/** BARRAS DE PROGRESSO */
+.Container span[data-semiprogress1],
+.Container span[data-semiprogress2] {
+    position: absolute;
+    height: 130px;
+    width: 0.12em;
+    background-color: #a9a9a9;
+}
+
+/** BARRRA DE PROGRESSO BOTTOM */
+.Container span[data-semiprogress2] {
+    bottom: 10%;
+}
+
+
+.z-index5 {
+    z-index: 5;
+    background-color: white;
+}
+
+/** CONTAINER INFO*/
+
+.unique{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.containerInfo {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ea8b1f;
+    margin: 40px 10px 40px 10px;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.containerInfo h2 {
+    margin: 20px 0px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.containerInfo label {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.idContInfo {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    width: 80%;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.marginB {
+    margin-bottom: 60px;
+}
+
+.doc {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4c58f;
+}
+
+.material-icons {
+    font-size: 1.3em;
+}
+
+.imgCont{
+    border: dashed 1px white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.104);
+    color: white;
+}
+
+.null{
+display: none;
+}
+.opac{
+opacity: 0;
+}
+.Container .activeModal1 {
+    height: 65%;
+}
+.Container .activeModal2 {
+    height: 80%;
+}
+
+.btnComponent{
+    width: 80%;
+    border-radius: 2px;
+    padding: 4px;
+    background-color: transparent;
+    font-weight: 600;
+    border: 0.2em solid rgb(232, 227, 216);
+    letter-spacing: 1px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+    background-color: #ea8b1f;
+}
+
+/** CONTAINER CADASTRO ESTUFAMENTO*/
+.CadEstufamento {
+    background-color: #ea8b1f;
+    margin: 0 10px 40px 10px;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.CadEstufamento h2 {
+    color: white;
+    margin: 20px 0;
+}
+
+.CadEstufamento label {
+    color: white;
+}
+
+.idEstufamento, .idMotorista {
+    background-color: #f4c58f;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.legenda {
+    min-height: 100px;
+    text-align: start;
+}
+
+@media screen and (min-width: 700px) {
+    .contProgress {
+        position: relative;
+        margin: 90px 0 0 0;
+        padding: 10px 10px;
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progressIcon {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 2.5em;
+    }
+
+    .progressText {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.1em;
+        text-align: center;
+        color: #a9a9a9;
+    }
+
+    .progressText p:is(:nth-child(1), :nth-child(2)) {
+        transform: translateX(-20px);
+    }
+
+    .Container span[data-semiprogress1],
+    .Container span[data-semiprogress2] {
+        position: absolute;
+        height: 0.1em;
+        width: 26%;
+        background-color: #a9a9a9;
+    }
+
+    .Container span[data-semiprogress2] {
+        top: 14%;
+        right: 20%;
+    }
+
+    .Container span[data-semiprogress1] {
+        top: 14%;
+        left: 20%;
+    }
+
+    .containerInfo {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ea8b1f;
+        margin: 0 10px 40px 10px;
+        border-radius: 20px;
+        width: 45%;
+    }
+
+    .separator {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .CadEstufamento {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+
+    .CadEstufamento,
+    .containerInfo {
+        width: 30%;
+    }
+
+    .separator {
+        justify-content: space-around;
+    }
+}

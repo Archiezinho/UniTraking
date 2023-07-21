@@ -1,0 +1,144 @@
+.NavMenu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    background: linear-gradient(150deg, rgb(43, 126, 220), #2d35ce, #171fbe);
+    display: flex;
+    flex-direction: column;
+    justify-content: safe;
+    transition: all 0.7s ease-in-out;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.NavMenu-container div[data-menu] {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    position: fixed;
+    left: 20px;
+    z-index: 2;
+}
+
+.container-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.menu-line1,
+.menu-line2,
+.menu-line3 {
+    display: block;
+    width: 100%;
+    height: 0.2em;
+    background-color: #ea8b1f;
+    border-radius: 50px;
+    transition: all 0.2s ease-out;
+}
+
+.menu-line2 {
+    margin: 6px 0 6px 0;
+}
+
+.NavMenu-container nav {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.NavMenu-container ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.NavMenu-container li,
+.NavMenu-container a {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.NavMenu-container a {
+    color: white;
+    font-size: 1.4em;
+    padding: 10px 20px 10px 20px;
+
+}
+
+.NavMenu-container li {
+    position: relative;
+    z-index: 3;
+}
+
+.NavMenu-container li::before {
+    display: flex;
+    content: '';
+    position: absolute;
+    width: 0%;
+    border-radius: 50px;
+    height: 0.2em;
+    left: 0;
+    bottom: 0;
+    background-color: #ea8b1f;
+    transition: all 0.25s ease-in-out;
+    z-index: 1;
+}
+
+.NavMenu-container li:hover::before {
+    width: 100%;
+}
+
+
+/*** MENU MOBILE ***/
+.activeMenu {
+    width: 100%;
+}
+
+/*** MENU DESKTOP ***/
+.activeMenuB {
+    width: 300px;
+}
+
+/*** ANIMAÇAO DO BOTAO MENU ***/
+.activeBtnMenu:is(.menu-line1) {
+    transform: translateY(9px) rotate(-45deg);
+}
+
+.activeBtnMenu2:is(.menu-line2) {
+    opacity: 0;
+}
+
+.activeBtnMenu3:is(.menu-line3) {
+    transform: translateY(-9px) rotate(45deg);
+}
+.null{
+display: none;
+}
+
+@media screen and (min-width: 1100px) {
+
+    .NavMenu-container li,
+    .NavMenu-container a {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        cursor: pointer;
+        text-align: left;
+    }
+}

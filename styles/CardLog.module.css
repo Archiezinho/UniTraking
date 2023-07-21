@@ -1,0 +1,32 @@
+.CardLog {
+    width: 80%;
+    background: linear-gradient(10deg, rgb(43, 126, 220), #2d35ce, #171fbe);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50px;
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 20px;
+}
+
+.CardLog strong {
+    font-weight: 600;
+    color: #ffcb8f;
+}
+
+#idLog {
+    position: absolute;
+    left: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+    .CardLog {
+        max-width: 900px;
+        width: 100%;
+    }
+}
